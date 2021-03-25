@@ -46,6 +46,9 @@ int main() {
 				antes de operar para obtener presición al dividir*/
 		result = (double)a / (double)b;
 		break;
+	default: /*Inválida*/
+		printf("ésta opción es inválida : %d", opc);
+		return 1;	 		//devuelve 1 a main() y termina la ejecución
 	}
 	printf("%d %c %d = %lf", a, simbolo, b, result);
 	getch();
