@@ -26,7 +26,7 @@ int main() {
 		mayor = p3;
 		//El precio de las dos mas baratas es la suma de las tres menos el mas caro
 		//mostramos resultados (%.2lf: dos decimales)
-	printf("\n***Leve las 3 películas a %.2lf", (p1+p2+p3-mayor) );
+	printf("\n***Lleve las 3 peliculas a $%.2lf", (p1+p2+p3-mayor) );
 	
 	getch();
 	return 0;

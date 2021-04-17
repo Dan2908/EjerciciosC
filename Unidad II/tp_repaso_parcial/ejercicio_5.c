@@ -14,7 +14,7 @@ int main(){
 	bool primo, fibonacci;
 	// Bucle principal, se saldrá con la condición de salida
 	while(true){ 
-		f1 = 1;
+		f1 = 0;
 		f2 = 1;
 		primo = true;
 		fibonacci = false;
@@ -37,7 +37,7 @@ int main(){
 			}
 		}
 			//verificamos si pertenece a la sucesión de fibonacci
-		for(int i = 0; i <= 15; i++){
+		for(int i = 0; i < 15; i++){
 			fibo = f1 + f2;						//calculamos el siguiente de la sucesión
 			f1 = f2; 
 			f2 = fibo;
