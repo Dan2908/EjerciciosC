@@ -1,4 +1,8 @@
+/*Calcularla superficie de un círculo. La operación se realizará una vez comprobado 
+ que los valores ingresados sean correctos.*/
 #include <stdio.h>
+#include <conio.h>
+
 #define PI 3.1416
 int main() {
 	int r;
@@ -12,6 +16,7 @@ int main() {
 	}
 	
 	printf("\nLa superficie del circulo con radio %d es %.2lf", r, PI*r*r);
+	getch();
 	return 0;
 }
 

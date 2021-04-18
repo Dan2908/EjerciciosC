@@ -1,15 +1,15 @@
-// Ingresar dos n鷐eros enteros por pantalla. El usuario debe seleccionar 
-// la operaci髇 a realizar: suma, resta, multiplicaci髇 o divisi髇. 
-// Mostrar los resultados por pantalla.
-
+/*Modificar el ejercicio 2.2 de la gu铆a de trabajo pr谩ctico de Switch,
+  de tal forma que se pueda repetir la selecci贸n de operaciones tantas
+  veces como el usuario quiera, pregunt谩ndole si quiere realizar otra operaci贸n.*/
 #include <stdio.h>
+#include <conio.h>
 #include <stdbool.h>	//bool
 
 int main() {
 	int a, b, operacion;
-	
+	while(true){
 			//************* Menu principal
-		printf("**** Elija una operaci髇 ****\n");
+		printf("**** Elija una operaci贸n ****\n");
 		printf("\t 1. Sumar\n\t 2. Restar\n\t 3. Multiplicar\n\t 4. Dividir\n\t 0. Salir\n");
 		scanf("%d", &operacion);
 			//************ Operaciones del 0(salir) al 4
@@ -45,14 +45,12 @@ int main() {
 				scanf("%d", &b);
 				printf("__________\n%10.2lf\n", (double)a/b);
 				break;
-				// ****************caso de opci髇 incorrecta
+				// ****************caso de opci贸n incorrecta
 			default:
-				printf("Opci髇 incorrecta: %d", operacion);
+				printf("Opci贸n incorrecta: %d", operacion);
 		}
+		if(operacion == 0) break;	//Si elige salir, sale del bucle principal
 	}
-	
-	
-	getchar();
+	getch();
 	return 0;
 }
-

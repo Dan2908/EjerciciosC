@@ -33,7 +33,7 @@ int main(){
 		for(int i = 2; i <= sqrt(num); i++){	//Solo hasta la raiz cuadrada de num (por propiedad es suficiente)
 			if(num%i == 0){
 				primo = false;
-				break;						// Si és primo, salimos.
+				break;						// Si no es primo, salimos.
 			}
 		}
 			//verificamos si pertenece a la sucesión de fibonacci
