@@ -15,6 +15,7 @@ int main() {
 	scanf("%lf", &n);
 		/*Asegurar que n esté entre el rango requerido*/
 	while(n < 0.0001 || n > 0.9999){
+		fflush(stdin);
 		printf("El número debe estar entre 0,0001 y 0,9999: ");
 		scanf("%lf", &n);
 	}
