@@ -27,11 +27,13 @@ static int cantidad = sizeof(alumnos)/sizeof(struct Alumno);
 
 /*  Muestra los datos de cada alumno en el formato solicitado. */
 void mostrar_datos(struct Alumno* alumnos);
+/*  Muestra los datos de cada alumno en el formato solicitado incluyendo la edad. */
+void mostrar_datos_y_edad(struct Alumno* alumnos);
 
 /** ---------------------- Programa ----------------------*/
 
 int main(){
-    mostrar_datos(alumnos);
+    mostrar_datos_y_edad(alumnos);
     printf("\nFin del programa, presione Enter para salir...");
     PAUSA;
     return 0;
@@ -43,7 +45,19 @@ void mostrar_datos(struct Alumno* alumnos){
     printf("\tListado de alumnos\n"
             "DNI%-10cApellido%-7cNombre\n\n", ' ', ' ');
     for(int i=0; i < cantidad; i++){
-        printf("%-13s%-15s%s\n", alumnos[i].m_dni, alumnos[i].m_nombre, alumnos[i].m_apell);
+        printf("%-13s%-15s%s\n", alumnos[i].m_dni, alumnos[i].m_apell, alumnos[i].m_nombre);
     }
     printf("Total de alumnos: %i\n", cantidad);
+}
+
+void mostrar_datos_y_edad(struct Alumno* alumnos){
+    int edad = 0;       // Se añade acumulador
+    printf("\tListado de alumnos\n"
+            "DNI%-10cApellido%-7cNombre%-9cEdad\n\n", ' ', ' ', ' ');
+    for(int i=0; i < cantidad; i++){
+        printf("%-13s%-15s%-15s%i\n", alumnos[i].m_dni, alumnos[i].m_apell, alumnos[i].m_nombre, alumnos[i].m_edad);
+        edad += alumnos[i].m_edad;  // Se incrementa acumulador
+    }
+    printf("Total de alumnos: %i\n", cantidad);
+    printf("Promedio de edad de los alumnos: %i\n", (int)edad/cantidad);
 }
